@@ -1,4 +1,4 @@
-
+this is the bottom half of the main page
 
 <style>
     * {
