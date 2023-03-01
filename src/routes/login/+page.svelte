@@ -1,29 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<svelte:head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
         integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+</svelte:head>
 
-    <title>Login Page</title>
-</head>
+<script>
+    let forgotPassword = false;
 
+    function togglePassword() {
+        forgotPassword = !forgotPassword
+    }
+</script>
+{#if !forgotPassword}
 <body>
-
     <header>
         <div class="moon">
             <button><i class="bi bi-moon-stars"></i></button>
         </div>
     </header>
-
     <main>
-
-
         <div class="card">
             <div class="innerbox">
                 <div class="front">
@@ -37,7 +32,7 @@
                         <label class="password__label" for="name">Password</label>
                     </div>
                     <div class="forgotpass">
-                        <a href="http://127.0.0.1:5500/loginpage/forgotPassword.html"><span>Forgot Password?</span></a>
+                        <a on:click|preventDefault={togglePassword}><span>Forgot Password?</span></a>
                     </div>
                     <div class="signinButton">
                         <button> Log In</button>
@@ -54,9 +49,6 @@
                         </button>
                     </div>
                 </div>
-
-
-
                 <div class="back">
                     <p class="nameofpage">Sign up</p>
                     <div class="name">
@@ -78,7 +70,7 @@
                     </div>
 
                     <div class="conformpassword">
-                        <label for="password">Conform Password:</label>
+                        <label for="password">Confirm Password:</label>
                         <br>
                         <input type="password" name="password" id="conformpassword">
                     </div>
@@ -100,18 +92,13 @@
                         </button>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     </main>
 </body>
-</html>
-
-
-
-
+{:else}
+<a on:click|preventDefault={togglePassword}>Go back</a>
+{/if}
 
 <style>
 * {
