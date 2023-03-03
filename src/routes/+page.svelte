@@ -1,5 +1,5 @@
 <script>
-    
+    import Graph from "../lib/Graph.svelte";  
 </script>
 
 <style>
@@ -32,31 +32,12 @@
         padding-left: 10px;
     }
 
-</style>
-
-<div class='body'>
-    <div>
-       <article>
-           <div class="container-list">
-               <div class="container-graph-content">
-                   <section id="text-content">
-                       <div class="col-6 col-sm-4">NASDAQ</div>
-                       <div class="col-6 col-sm-4">DOWJONES</div>
-                       <div class="col-6 col-sm-4">S&P 500</div>
-                       <div class="col-6 col-sm-4">Bitcoin</div>
-                   </section>
-               </div>
-
-               <div class="container-graph">
-                   <img src="dow.png" height="200px" width="auto" alt="graph">
-               </div>
-           </div>
-        </article>
-    </div>
-</div>
-
-<style>
-    body {
+    .Graph {
+        width: 500px;
+        height: 100px;
+    }
+/* ---------------------------------------------------------------- */
+    .body2 {
         background-color: whitesmoke;
     }
 
@@ -110,11 +91,39 @@
         padding: 5px;
         margin-top: 30px;
     }
+
 </style>
 
+<div class='body'>
+    <div>
+       <article>
+           <div class="container-list">
+               <div class="container-graph-content">
+                   <section id="text-content">
+                       <div class="col-6 col-sm-4">NASDAQ</div>
+                       <div class="col-6 col-sm-4">DOWJONES</div>
+                       <div class="col-6 col-sm-4">S&P 500</div>
+                       <div class="col-6 col-sm-4">Bitcoin</div>
+                   </section>
+               </div>
 
-<html lang="en-US">
-<body>
+               <div class="container-graph">
+                   <img src="dow.png" height="200px" width="auto" alt="graph">
+               </div>
+               <!-- Noam graph testing (feel free to move around)-->
+               <div class="Graph">
+                    <Graph/>
+               </div>
+               <div>
+
+               </div>
+           </div>
+        </article>
+    </div>
+</div>
+
+
+<div class="body2">
 
 <div class="flex-container-table">
 <div class="tablecat-container">
@@ -138,11 +147,6 @@
 <p class="news-item"> Trending news item etc... </p>
 </div>
 
-<footer>
-  <p> contact@email.com </p>
-</footer>
 
 
-
-</body>
-</html>
+</div>
