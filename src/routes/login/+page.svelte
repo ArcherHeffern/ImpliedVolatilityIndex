@@ -1,8 +1,11 @@
 <svelte:head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
         integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
 </svelte:head>
+
+<!-- put login page in if statements, and forgot password page in the else statement
+Search up conditionals in svelte
+-->
 
 <script>
     let forgotPassword = false;
@@ -97,6 +100,7 @@
     </main>
 </body>
 {:else}
+
 <a on:click|preventDefault={togglePassword}>Go back</a>
 {/if}
 
