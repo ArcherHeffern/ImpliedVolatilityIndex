@@ -100,8 +100,37 @@ Search up conditionals in svelte
     </main>
 </body>
 {:else}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forgotpass.css">
+    <title>Forgot Password</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="enterusername">
+                    <label class="name" for="Username">Username:</label>
+                    <br>
+                    <input class="username" type="username" name="username" id="username" required>
+                </div>
+                <div><button class="button"><a href="http://127.0.0.1:5500/loginpage/index.html">submit</a>
+                </button>
+              </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
 
 <a on:click|preventDefault={togglePassword}>Go back</a>
+
 {/if}
 
 <style>
