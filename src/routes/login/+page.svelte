@@ -100,18 +100,6 @@ Search up conditionals in svelte
     </main>
 </body>
 {:else}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="forgotpass.css">
-    <title>Forgot Password</title>
-</head>
-
-<body>
-    <main>
         <div class="container">
             <div class="card">
                 <div class="enterusername">
@@ -124,10 +112,6 @@ Search up conditionals in svelte
               </div>
             </div>
         </div>
-    </main>
-</body>
-</html>
-
 
 <a on:click|preventDefault={togglePassword}>Go back</a>
 
@@ -641,4 +625,43 @@ button:active {
 
 </style>
 
+
+<style>
+    .containerfor_forgotPass {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_forgotPass {
+    background-color: rgb(180, 180, 192);
+    text-align: center;
+    width: 300px;
+    height: 300px;
+}
+
+.enterusername_forgotPass {
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.username_forgotPass {
+    margin: 2rem 0 2rem 0;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 15px;
+}
+
+.button_forgotPass {
+    width: 5rem;
+    height: 3rem;
+    border-radius: 15px;
+}
+
+.button_forgotPass a {
+    text-decoration: none;
+    color: black;
+}
+</style>
 
