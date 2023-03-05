@@ -623,11 +623,7 @@ button:active {
     }
 }
 
-</style>
-
-
-<style>
-    .containerfor_forgotPass {
+.containerfor_forgotPass {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -663,5 +659,6 @@ button:active {
     text-decoration: none;
     color: black;
 }
+
 </style>
 
