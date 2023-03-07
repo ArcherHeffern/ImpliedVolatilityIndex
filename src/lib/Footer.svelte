@@ -69,7 +69,7 @@
         <div id="footer-right">
             <h1 class="footer-h1">About Us</h1>
             <a href="https://brandeisquantclub.org/" class="footer-link">QUANT</a>
-            <a href="/" class="footer-link">About Us Page</a>
+            <a href="/team" class="footer-link">About Us Page</a>
         </div>
     </div>
     <div id="footer-bottom">
