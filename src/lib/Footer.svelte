@@ -59,30 +59,20 @@
 
 </script>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="footer-basic-alt.css">
-    <title>Document</title>
-</head>
-<body>
-    <div id="footer-main">
-        <div id="footer-top">
-            <div id="footer-left">
-                <h1 class="footer-h1">Contact Us</h1>
-                <a href="#" class="footer-link">LinkedIn</a>
-            </div>
-            <div id="footer-right">
-                <h1 class="footer-h1">About Us</h1>
-                <a href="#" class="footer-link">QUANT</a>
-                <a href="#" class="footer-link">About Us Page</a>
-            </div>
+
+<div id="footer-main">
+    <div id="footer-top">
+        <div id="footer-left">
+            <h1 class="footer-h1">Contact Us</h1>
+            <a href="https://www.linkedin.com/company/brandeisquants/about/" class="footer-link">LinkedIn</a>
         </div>
-        <div id="footer-bottom">
-            <h4 id="footer-copyright">[copyright info]</h4>
+        <div id="footer-right">
+            <h1 class="footer-h1">About Us</h1>
+            <a href="https://brandeisquantclub.org/" class="footer-link">QUANT</a>
+            <a href="/" class="footer-link">About Us Page</a>
         </div>
     </div>
-</body>
-</html>
+    <div id="footer-bottom">
+        <h4 id="footer-copyright">[copyright info]</h4>
+    </div>
+</div>
