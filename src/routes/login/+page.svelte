@@ -8,24 +8,18 @@ Search up conditionals in svelte
 -->
 
 <script>
-    let forgotPassword = false;
+    let signin = false;
 
-    function togglePassword() {
-        forgotPassword = !forgotPassword
+    function toggleflip() {
+        signin = !signin
     }
 </script>
-{#if !forgotPassword}
-<body>
-    <header>
-        <div class="moon">
-            <button><i class="bi bi-moon-stars"></i></button>
-        </div>
-    </header>
-    <main>
+{#if !signin}
+
+        <!-- add a form tag -->
         <div class="card">
             <div class="innerbox">
                 <div class="front">
-                    <h1>Log In</h1>
                     <div class="user">
                         <input required="" placeholder="Name" class="userfield" type="input">
                         <label class="form__label" for="name">User Name</label>
@@ -34,157 +28,85 @@ Search up conditionals in svelte
                         <input required="" placeholder="Password" class="password__field" type="password">
                         <label class="password__label" for="name">Password</label>
                     </div>
-                    <div class="forgotpass">
-                        <a on:click|preventDefault={togglePassword}><span>Forgot Password?</span></a>
-                    </div>
-                    <div class="signinButton">
-                        <button> Log In</button>
+                    <div class="remember">
+                        <p><span class="input"><input type="checkbox" name="checkbox" id="checkboc"></span>Remember me
+                        </p>
+
                     </div>
 
                     <div class="account">
-                        <p>Don't have an account?</p>
-                        <button class="signin" onclick="openSignup()">Sign Up</button>
-                        <br>
-                        <p class="or">or</p>
-                        <br>
-                        <button class="google_signin">
-                            <span><i class="bi bi-google"></i></span> Login with Google
-                        </button>
-                    </div>
-                </div>
-                <div class="back">
-                    <p class="nameofpage">Sign up</p>
-                    <div class="name">
-                        <label for="username">Username:</label>
-                        <br>
-                        <input type="text" id="username" name="username"><br>
-                    </div>
-
-                    <div class="email">
-                        <label for="Email">Email:</label>
-                        <br>
-                        <input type="email" name="email" id="Email">
-                    </div>
-
-                    <div class="enterpassword">
-                        <label for="password">Password:</label>
-                        <br>
-                        <input type="password" name="password" id="password">
-                    </div>
-
-                    <div class="conformpassword">
-                        <label for="password">Confirm Password:</label>
-                        <br>
-                        <input type="password" name="password" id="conformpassword">
-                    </div>
-
-                    <div class="signupbutton">
-                        <button>
-                            Sign Up
-                        </button>
-                    </div>
-
-                    <div class="accountAlready">
-                        <p class="a">Already have an account?</p>
-                        <button class="login" onclick="openLogin()">Log In</button>
-                        <br>
-                        <p class="or">or</p>
-                        <br>
-                        <button class="google_signUp">
-                            <span><i class="bi bi-google"></i></span> Signup with Google
-                        </button>
+                        <div class="signbutton">
+                            <button class="login"> Log In</button>
+                            <br>
+                            <p id="or">or</p>
+                            <br>
+                            <button class="signin" on:click={toggleflip}>Create Account</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-</body>
+
 {:else}
-        <div class="container">
-            <div class="card">
-                <div class="enterusername">
-                    <label class="name" for="Username">Username:</label>
-                    <br>
-                    <input class="username" type="username" name="username" id="username" required>
+        
+    <div class="container2">
+        <div class="back">
+            <div class="name">
+                <input required="" placeholder="Name" class="name_field" type="input">
+                <label class="form2__label" for="name">Name</label>
+            </div>
+
+            <div class="new_email">
+                <input required="" placeholder="Username" class="email_field" type="input">
+                <label class="email2_label" for="Email">Email</label>
+            </div>
+
+            <div class="enterpassword">
+                <input required="" placeholder="Password" class="new_password__field" type="password">
+                <label class="New_password__label" for="name">Password</label>
+            </div>
+
+            <div class="confirmpassword">
+                <input required="" placeholder="confirm_Password" class="confirm_password__field" type="password">
+                <label class="confirm_password__label" for="name">Confirm Password</label>
+            </div>
+            <div class="signupbuttondiv">
+                <div class="signupbutton">
+                    <button>
+                        Sign Up
+                    </button>
                 </div>
-                <div><button class="button"><a href="http://127.0.0.1:5500/loginpage/index.html">submit</a>
-                </button>
-              </div>
             </div>
         </div>
-
-<a on:click|preventDefault={togglePassword}>Go back</a>
+    </div>
 
 {/if}
+
 
 <style>
 * {
     padding: 0;
     border: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Gothic A1', sans-serif;
+    font-family: 'Hind', sans-serif;
+    font-family: 'Nosifer', cursive;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Raleway', sans-serif;
 }
 
-:root {
-    --background-color: linear-gradient(123deg, #0fb0b6, #1f307a, #8b3e0f);
-
-}
-
-body {
-    background: var(--background-color);
-    background-size: 600% 600%;
-    -webkit-animation: AnimationName 15s ease infinite;
-    -moz-animation: AnimationName 15s ease infinite;
-    animation: AnimationName 15s ease infinite;
-}
-
-.dark-theme {
-    --background-color: #000;
-
-}
-
-/* this is the for darkmode */
-.moon {
-    /* font-size: 30px; */
-    position: absolute;
-    top: 1rem;
-    left: 80rem;
-    color: white;
-}
-
-.moon button {
-    background-color: transparent;
-    color: rgb(255, 255, 255);
-    font-size: 3rem;
-
-}
-
-
-.moon button:hover {
-    background-color: rgb(10, 98, 133);
-    color: black;
-    /* box-shadow: 0 0 20px #01010150; */
-}
-
-.moon button:active {
-    background-color: transparent;
-    transition: all 0.25s;
-    -webkit-transition: all 0.25s;
-}
 
 /* this is the code for the card */
 .card {
     width: 400px;
     height: 550px;
-    margin: 7em auto;
+    margin: auto;
     border-radius: 20px;
-    background: #8830d5;
-    perspective: 1000px;
-
+    /* background: #fefefe; */
+    /* perspective: 1000px; */
 
 }
 
 .innerbox {
-    position: relative;
     width: 100%;
     height: 100%;
     /* this is controls thje back or fornt */
@@ -204,24 +126,19 @@ body {
     backface-visibility: hidden;
 }
 
-.back {
+/* .back {
     transform: rotateY(180deg);
-}
-
-.front h1 {
-    text-align: center;
-    color: black;
-    text-decoration: underline white;
-}
+} */
 
 /* this code contian user input */
 .user {
     position: relative;
     padding: 1rem 0 0 1rem;
     /* the margin below conntols the positon */
-    margin: .5rem 0 1rem 3rem;
+    margin: 8rem 0 1rem 3rem;
     width: 200%;
     max-width: 250px;
+
 }
 
 .userfield {
@@ -231,7 +148,7 @@ body {
     border-bottom: 2px solid #111111;
     outline: 0;
     font-size: 17px;
-    color: #fff;
+    color: rgb(0, 0, 0);
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
@@ -253,7 +170,7 @@ body {
     display: block;
     transition: 0.2s;
     font-size: 17px;
-    color: #9b9b9b;
+    color: #0a0a0a;
     pointer-events: none;
 }
 
@@ -301,7 +218,7 @@ body {
     border-bottom: 2px solid #111111;
     outline: 0;
     font-size: 17px;
-    color: #fff;
+    color: rgb(0, 0, 0);
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
@@ -323,7 +240,7 @@ body {
     display: block;
     transition: 0.2s;
     font-size: 17px;
-    color: #9b9b9b;
+    color: #090707;
     pointer-events: none;
 }
 
@@ -353,73 +270,55 @@ body {
 
 /* end of password form */
 
-/* forgot password */
-.forgotpass {
+/*  this is the start for remember me*/
+
+.remember {
     text-align: center;
+    margin: 0 0 2rem;
 }
 
-.forgotpass a {
-    text-decoration: none;
-    color: white;
-    margin: 0 0 1rem 0;
+.remember input {
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
-.forgotpass a:hover {
-    color: rgb(224, 18, 18);
+.remember span {
+    color: yellow;
 }
 
 
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-/*  this is the log in button*/
-.signinButton button {
-    padding: 10px 50px;
-    border-radius: 50px;
-    background-color: #2ba8fb;
-    color: #ffffff;
-    margin: 1rem 1rem 0 8rem;
-    font-weight: Bold;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+
 }
 
-button:hover {
-    background-color: #6fc5ff;
-    box-shadow: 0 0 20px #6fc5ff50;
+.account .signbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-button:active {
-    background-color: #3d94cf;
-    transition: all 0.25s;
-    -webkit-transition: all 0.25s;
-    box-shadow: none;
-}
-
-/*  this is the code for the class */
-.account p {
-    text-align: center;
-    margin: 1rem 0 0 0;
-    font-size: 20px;
-}
-
-/* this is the sign in button */
 
 .signin {
-    padding: 10px 50px;
-    border-radius: 50px;
-    background-color: #2ba8fb;
-    color: #ffffff;
-    margin: 2rem 1rem 0 8rem;
-    font-weight: Bold;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+    background: transparent;
+    font-size: 1.5rem;
 }
 
-button:hover {
+
+.login {
+    background: none;
+    font-size: 1.5rem;
+}
+.signbutton button:hover {
     background-color: #6fc5ff;
     box-shadow: 0 0 20px #6fc5ff50;
 }
 
-button:active {
+.signbutton button:active {
     background-color: #3d94cf;
     transition: all 0.25s;
     -webkit-transition: all 0.25s;
@@ -427,238 +326,336 @@ button:active {
 }
 
 
-.account .or {
-    font-size: 30px;
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-/* this is the button for log in with goodle */
-
-
-.google_signin {
-    padding: 15px 40px 15px 40px;
-    border-radius: 50px;
-    background-color: #2ba8fb;
-    color: #ffffff;
-    margin: 0 0 0 6.5rem;
-    font-weight: Bold;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-
-button:hover {
-    background-color: #6fc5ff;
-    box-shadow: 0 0 20px #6fc5ff50;
-}
-
-button:active {
-    background-color: #3d94cf;
-    transition: all 0.25s;
-    -webkit-transition: all 0.25s;
-    box-shadow: none;
-}
-
-.google_signin span {
-    color: black;
-}
-
-
-
-/* this is for the back side of the card */
 .back {
+    width: 400px;
+    height: 550px;
+    margin: 7em auto;
     border-radius: 20px;
-    background: #8830d5;
+    background: #fefefe;
+    perspective: 1000px;
+
 }
 
-.nameofpage {
-    text-align: center;
-    font-size: 30px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    text-decoration: underline snow;
+.back {
+    width: 300px;
+    height: 450px;
+    background-color: aquamarine;
 }
 
-.name label {
-    /* text-align: center; */
-    font-size: 1rem;
-    margin-top: 1rem;
-    margin: .5rem 0 0 3rem;
+/* start of the name input */
+.name {
+    position: relative;
+    padding: 20px 0 0;
+    margin: 20px 0 2rem 20px;
+    margin-top: 10px;
+    width: 180%;
+    max-width: 180px;
 }
 
-.name input {
-    width: 200px;
-    height: 25px;
-    border-radius: 15px;
-    text-align: center;
-    margin: .5rem 0 1rem 2rem;
+.name_field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #000000;
+    outline: 0;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
 }
 
-.email label {
-    font-size: 1rem;
-    margin-top: 1rem;
-    margin: 1rem 0 0 3rem;
+.name_field::placeholder {
+    color: transparent;
 }
 
-.email input {
-    width: 200px;
-    height: 25px;
-    border-radius: 15px;
-    text-align: center;
-    margin: .5rem 0 1rem 2rem;
+.name_field:placeholder-shown~.form2__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
 }
 
-.enterpassword label {
-    font-size: 1rem;
-    margin-top: 1rem;
-    margin: 1rem 0 0 3rem;
+.form2__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #000000;
+    pointer-events: none;
 }
 
-.enterpassword input {
-    width: 200px;
-    height: 25px;
-    border-radius: 15px;
-    text-align: center;
-    margin: .5rem 0 1rem 2rem;
+.name_field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
 }
 
-.conformpassword label {
-    font-size: 1rem;
-    margin-top: 1rem;
-    margin: 1rem 0 0 3rem;
+.name_field:focus~.form2__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #38caef;
+    font-weight: 700;
 }
 
-.conformpassword input {
-    width: 200px;
-    height: 25px;
-    border-radius: 15px;
-    text-align: center;
-    margin: .5rem 0 .5rem 2rem;
+/* reset input */
+.name_field:required,
+.name_field:invalid {
+    box-shadow: none;
+}
+
+/* end of tthe name input */
+
+/* start of email input */
+
+.new_email {
+    position: relative;
+    padding: 20px 0 0;
+    margin: 20px 0 2rem 20px;
+    margin-top: 10px;
+    width: 180%;
+    max-width: 180px;
+}
+
+.email_field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #000000;
+    outline: 0;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.email_field::placeholder {
+    color: transparent;
+}
+
+.email_field:placeholder-shown~.email2_label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+.email2_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #000000;
+    pointer-events: none;
+}
+
+.email_field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
+}
+
+.email_field:focus~.email2_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #38caef;
+    font-weight: 700;
+}
+
+/* reset input */
+.email_field:required,
+.email_field:invalid {
+    box-shadow: none;
+}
+
+/* end of Email input */
+
+
+/* start of enter password */
+
+.enterpassword {
+    position: relative;
+    padding: 20px 0 0;
+    margin: 20px 0 2rem 20px;
+    margin-top: 10px;
+    width: 180%;
+    max-width: 180px;
+}
+
+.new_password__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #000000;
+    outline: 0;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.new_password__field::placeholder {
+    color: transparent;
+}
+
+.new_password__field:placeholder-shown~.New_password__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+.New_password__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #000000;
+    pointer-events: none;
+}
+
+.new_password__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
+}
+
+.new_password__field:focus~.New_password__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #38caef;
+    font-weight: 700;
+}
+
+/* reset input */
+.new_password__field:required,
+.new_password__field:invalid {
+    box-shadow: none;
+}
+
+/* end of enter password */
+
+/* the start of confirm password */
+
+.confirmpassword {
+    position: relative;
+    padding: 20px 0 0;
+    margin: 20px 0 2rem 20px;
+    margin-top: 10px;
+    width: 180%;
+    max-width: 180px;
+}
+
+.confirm_password__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #000000;
+    outline: 0;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.confirm_password__field::placeholder {
+    color: transparent;
+}
+
+.confirm_password__field:placeholder-shown~.confirm_password__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+.confirm_password__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #000000;
+    pointer-events: none;
+}
+
+.confirm_password__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
+}
+
+.confirm_password__field:focus~.confirm_password__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #38caef;
+    font-weight: 700;
+}
+
+/* reset input */
+.confirm_password__field:required,
+.confirm_password__field:invalid {
+    box-shadow: none;
+}
+
+/* end of confirm password */
+
+/* start of the start button */
+
+.signupbuttondiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .signupbutton button {
-    padding: 10px 50px;
-    border-radius: 50px;
-    background-color: #0896f5;
-    color: white;
-    margin: .5rem 1rem 0 8rem;
-    font-weight: Bold;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-
-.accountAlready .a {
-    text-align: center;
-    margin-bottom: .5rem;
-}
-
-.accountAlready .login {
-    padding: 10px 50px;
-    border-radius: 50px;
-    background-color: #0896f5;
-    color: white;
-    margin: 0 1rem 0 8rem;
-    font-weight: Bold;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-
-.accountAlready .or {
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.accountAlready .google_signUp {
-    padding: 10px 50px;
-    border-radius: 50px;
-    background-color: #0896f5;
-    margin: 0 0 0 6rem;
-    font-weight: Bold;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-
-
-
-
-
-/* below this, this is for the background */
-@-webkit-keyframes AnimationName {
-    0% {
-        background-position: 35% 0%
-    }
-
-    50% {
-        background-position: 66% 100%
-    }
-
-    100% {
-        background-position: 35% 0%
-    }
-}
-
-@-moz-keyframes AnimationName {
-    0% {
-        background-position: 35% 0%
-    }
-
-    50% {
-        background-position: 66% 100%
-    }
-
-    100% {
-        background-position: 35% 0%
-    }
-}
-
-@keyframes AnimationName {
-    0% {
-        background-position: 35% 0%
-    }
-
-    50% {
-        background-position: 66% 100%
-    }
-
-    100% {
-        background-position: 35% 0%
-    }
-}
-
-.containerfor_forgotPass {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_forgotPass {
-    background-color: rgb(180, 180, 192);
-    text-align: center;
-    width: 300px;
-    height: 300px;
-}
-
-.enterusername_forgotPass {
-    font-size: 25px;
-    margin-top: 15px;
-}
-
-.username_forgotPass {
-    margin: 2rem 0 2rem 0;
-    width: 15rem;
+    width: 5.5rem;
     height: 2rem;
-    border-radius: 15px;
+    background-color: aliceblue;
+    border-radius: 3rem;
+    border: none;
 }
 
-.button_forgotPass {
-    width: 5rem;
-    height: 3rem;
-    border-radius: 15px;
+.signupbutton button:hover {
+    background-color: #9cceef;
+    box-shadow: 0 0 20px #6fc5ff50;
 }
 
-.button_forgotPass a {
-    text-decoration: none;
-    color: black;
+.signupbutton button:active {
+    background-color: #3d94cf;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
 }
-
 </style>
 
