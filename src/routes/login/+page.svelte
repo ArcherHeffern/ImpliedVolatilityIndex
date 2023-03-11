@@ -13,7 +13,7 @@ Search up conditionals in svelte
     function toggleflip() {
         signin = !signin
     }
-    
+
 </script>
 {#if !signin}
 
