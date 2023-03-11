@@ -13,6 +13,7 @@ Search up conditionals in svelte
     function toggleflip() {
         signin = !signin
     }
+    
 </script>
 {#if !signin}
 
@@ -325,29 +326,16 @@ Search up conditionals in svelte
     box-shadow: none;
 }
 
-
-
-.container2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.back {
-    width: 400px;
-    height: 550px;
-    margin: 7em auto;
-    border-radius: 20px;
-    background: #fefefe;
-    perspective: 1000px;
-
-}
+/* start the sign up page */
 
 .back {
     width: 300px;
     height: 450px;
-    background-color: aquamarine;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 /* start of the name input */
