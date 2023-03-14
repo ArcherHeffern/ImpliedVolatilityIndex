@@ -36,7 +36,6 @@
 </style>
 
 <script>
-    import './styles.css'
     function analysisPopUp(){
       window.open("analysisplaceholder","bfs","fullscreen,scrollbars")
     }
