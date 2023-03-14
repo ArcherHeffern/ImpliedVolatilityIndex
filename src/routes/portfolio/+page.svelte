@@ -36,15 +36,12 @@
 </style>
 
 <script>
-    import Header from '../lib/Header.svelte'
-    import Footer from '../lib/Footer.svelte'
     import './styles.css'
     function analysisPopUp(){
       window.open("analysisplaceholder","bfs","fullscreen,scrollbars")
     }
 </script>
 
-<Header></Header>
 <div class="stockTable">
         <table>
             <div class = "rows">
@@ -89,5 +86,4 @@
     </table>
 </div>
 <button class="viewAnalysis" onClick = "analysisPopUp()" >View Analysis</button>
-<Footer></Footer>
 
