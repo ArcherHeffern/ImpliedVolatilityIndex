@@ -1,17 +1,36 @@
-<script>
-    import Graph from "../lib/Graph.svelte";  
-</script>
+This is the main section
 
 <style>
     * {
-        margin: 0;
-        padding: 0;
+        margin: 0px;
+        padding: 0px;
     }
 
     .body {
         height: 200vh;
         background: rgb(255, 255, 255);
     }
+
+    .header {
+        background: #88b3eb;
+        display: flex;
+        padding: 20px;
+        border-bottom: 1px solid #e9e9e9;
+    }
+
+    .header-left {
+        flex-grow: 1;
+        display: flex;
+        gap: 10px;
+        text-align: left;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #e9e9e9;
+    }
+
+
 
     .container-list {
         padding-top: 20px;
@@ -21,132 +40,72 @@
         padding-bottom: 20px;
     }
 
-    .container-graph-content {
-        padding-top: 20px;
+    .container-graph {
+        margin: 30px;
         display: flex;
-        justify-content: center;
-        padding-bottom: 20px;
+        justify-content: space-around;
+        flex-directon: row;
+        flex-wrap: wrap;
     }
+
+    .scroll-list{
+        margin: 90px;
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+
 
     #text-content {
         padding-left: 10px;
     }
 
-    .Graph {
-        width: 500px;
-        height: 100px;
-    }
-/* ---------------------------------------------------------------- */
-    .body2 {
-        background-color: whitesmoke;
-    }
-
-    p.tablecat{
-        font-family: 'Times New Roman', Times, serif;
-        border: solid cornflowerblue;
-        margin-right: 120px;
-    }
-
-    .flex-container-table{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .tablecat-container{
-        margin-top: 30px;
-    }
-
-    #table{
-        padding-left: 300px;
-        padding-bottom: 300px;
-        padding-top: 300px;
-        padding-right: 300px;
-        outline-style: solid;
-    }
-
-    h1{
-        text-align: center;
-        margin-top: 100px;
-    }
-
-    .flex-container-trending{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .news-item{
-        text-align: center;
-        border: solid cornflowerblue;
-        margin-left: 200px;
-        margin-right: 200px;
-        padding-top: 50px;
-    }
-
-    footer{
-        background-color: cornflowerblue;
-        padding: 5px;
-        margin-top: 30px;
-    }
+    /* a {
+        color: gray;
+        text-decoration: none;
+    } */
 
 </style>
 
-<div class='body'>
-    <div>
+<script>
+    
+</script>
+
+<div class="body">
+
+    <div class="main">
        <article>
+
+           <div class="scroll-list">
+                <img src="dow.png" height="100px" width="auto" alt="graph">
+                <img src="dow.png" height="100px" width="auto" alt="graph">
+                <img src="dow.png" height="100px" width="auto" alt="graph">
+                <img src="dow.png" height="100px" width="auto" alt="graph">
+                <img src="dow.png" height="100px" width="auto" alt="graph">
+                <img src="dow.png" height="100px" width="auto" alt="graph">
+                <img src="dow.png" height="100px" width="auto" alt="graph">
+                <img src="dow.png" height="100px" width="auto" alt="graph">
+                <img src="dow.png" height="100px" width="auto" alt="graph">
+           </div>
+
            <div class="container-list">
-               <div class="container-graph-content">
-                   <section id="text-content">
-                       <div class="col-6 col-sm-4">NASDAQ</div>
-                       <div class="col-6 col-sm-4">DOWJONES</div>
-                       <div class="col-6 col-sm-4">S&P 500</div>
-                       <div class="col-6 col-sm-4">Bitcoin</div>
-                   </section>
-               </div>
 
                <div class="container-graph">
-                   <img src="dow.png" height="200px" width="auto" alt="graph">
+                   <img src="dow.png" height="250px" width="auto" alt="graph">
+                   <button type="button"> + </button>
+                   <img src="dow.png" height="250px" width="auto" alt="graph">
+                   <button type="button"> + </button>
+                   <img src="dow.png" height="250px" width="auto" alt="graph">
+                   <button type="button"> + </button>
+                   <img src="dow.png" height="250px" width="auto" alt="graph">
+                   <button type="button"> + </button>
                </div>
-               <!-- Noam graph testing (feel free to move around)-->
-               <div class="Graph">
-                    <Graph/>
-               </div>
-               <div>
 
-               </div>
+               
            </div>
+
+        
         </article>
     </div>
-</div>
-
-
-<div class="body2">
-
-<div class="flex-container-table">
-<div class="tablecat-container">
-
-<p class="tablecat"> 100 Most Popular </p>
-<p class="tablecat"> Tech </p>
-<p class="tablecat"> Energy </p>
-<p class="tablecat"> Healthcare </p>
-<p class="tablecat"> etc </p>
-
-</div>
-
-<p id="table"> This is a data table </p>
-</div>
-
-<div class="flex-container-trending">
-<h1> Trending Now </h1>
-<p class="news-item"> Trending news item 1 </p>
-<p class="news-item"> Trending news item 2 </p>
-<p class="news-item"> Trending news item 4 </p>
-<p class="news-item"> Trending news item etc... </p>
-</div>
-
-
 
 </div>
