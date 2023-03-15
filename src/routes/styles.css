@@ -6,17 +6,3 @@
 .app {
     width: 100%;
 }
-
-body {
-    min-height: 100vh;
-}
-
-header,
-footer,
-main {
-    border: 2px solid black;
-}
-
-main {
-    min-height: 50vh;
-}
