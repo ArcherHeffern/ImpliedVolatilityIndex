@@ -106,7 +106,7 @@ Search up conditionals in svelte
 
 /* this is the code for the card */
 .card {
-    height: 81vh;
+    height: 83vh;
     display: flex;
 }
 
@@ -325,7 +325,7 @@ Search up conditionals in svelte
 /* \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ */
 
 .card2 {
-    height: 81vh;
+    height: 83vh;
     display: flex;
 }
 
