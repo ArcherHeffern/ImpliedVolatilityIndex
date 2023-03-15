@@ -80,7 +80,7 @@ Search up conditionals in svelte
                 <label class="confirm_password__label" for="name">Confirm Password</label>
             </div>
             <div class="signupbuttondiv">
-                <div class="signupbutton">
+                <div class="signupbutton" >
                     <button>
                         Sign Up
                     </button>
