@@ -21,6 +21,9 @@ Search up conditionals in svelte
         <div class="card">
             <div class="innerbox">
                 <div class="front">
+                    <div class="login">
+                        <h1>Log In</h1>
+                    </div>
                     <div class="user">
                         <input required="" placeholder="Name" class="userfield" type="input">
                         <label class="form__label" for="name">User Name</label>
@@ -52,6 +55,7 @@ Search up conditionals in svelte
         
     <div class="container2">
         <div class="back">
+            <div class="innerbox2">
             <div class="name">
                 <input required="" placeholder="Name" class="name_field" type="input">
                 <label class="form2__label" for="name">Name</label>
@@ -78,6 +82,7 @@ Search up conditionals in svelte
                     </button>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 
@@ -116,8 +121,7 @@ Search up conditionals in svelte
 
 }
 
-.front,
-.back {
+.front{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -132,11 +136,14 @@ Search up conditionals in svelte
 } */
 
 /* this code contian user input */
+.login{
+    text-align: center;
+}
 .user {
     position: relative;
     padding: 1rem 0 0 1rem;
     /* the margin below conntols the positon */
-    margin: 8rem 0 1rem 3rem;
+    margin: 1rem 0 1rem 3rem;
     width: 200%;
     max-width: 250px;
 
@@ -326,11 +333,15 @@ Search up conditionals in svelte
     box-shadow: none;
 }
 
+
 /* start the sign up page */
 
-.back {
-    width: 300px;
-    height: 450px;
+
+.innerbox2{
+    width: 400px;
+    height: 555px;
+    margin: auto;
+    border-radius: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
