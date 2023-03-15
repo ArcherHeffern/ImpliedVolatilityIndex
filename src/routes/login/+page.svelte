@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <svelte:head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
         integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
@@ -19,8 +18,8 @@ Search up conditionals in svelte
 {#if !signin}
 
         <!-- add a form tag -->
-        <div class="card">
-            <div class="innerbox">
+        <form action="">
+            <div class="card">
                 <div class="front">
                     <div class="login">
                         <h1>Log In</h1>
@@ -34,7 +33,8 @@ Search up conditionals in svelte
                         <label class="password__label" for="name">Password</label>
                     </div>
                     <div class="remember">
-                        <p><span class="input"><input type="checkbox" name="checkbox" id="checkboc"></span>Remember me
+                        <p><span class="input"><input type="checkbox" name="checkbox" id="checkboc"></span>Remember
+                            me
                         </p>
 
                     </div>
@@ -50,13 +50,15 @@ Search up conditionals in svelte
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
 
 {:else}
-        
-    <div class="container2">
+<form action="form">
+    <div class="card2">
         <div class="back">
-            <div class="innerbox2">
+            <div class="signup">
+                <h1>Sign up</h1>
+            </div>
             <div class="name">
                 <input required="" placeholder="Name" class="name_field" type="input">
                 <label class="form2__label" for="name">Name</label>
@@ -84,16 +86,16 @@ Search up conditionals in svelte
                 </div>
             </div>
         </div>
-        </div>
     </div>
+</form>
 
 {/if}
 
 
 <style>
 * {
+    margin: 0;
     padding: 0;
-    border: 0;
     font-family: 'Gothic A1', sans-serif;
     font-family: 'Hind', sans-serif;
     font-family: 'Nosifer', cursive;
@@ -104,47 +106,27 @@ Search up conditionals in svelte
 
 /* this is the code for the card */
 .card {
+    height: 81vh;
+    display: flex;
+}
+
+.front {
     width: 400px;
-    height: 550px;
+    height: 450px;
     margin: auto;
     border-radius: 20px;
-    /* background: #fefefe; */
-    /* perspective: 1000px; */
-
+    background: #ffffff;
 }
-
-.innerbox {
-    width: 100%;
-    height: 100%;
-    /* this is controls thje back or fornt */
-    /* transform: rotateY(-180deg); */
-    transform-style: preserve-3d;
-
-}
-
-.front{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    background-position: center;
-    background-size: cover;
-    backface-visibility: hidden;
-}
-
-/* .back {
-    transform: rotateY(180deg);
-} */
 
 /* this code contian user input */
-.login{
+.login {
     text-align: center;
 }
+
 .user {
     position: relative;
     padding: 1rem 0 0 1rem;
-    /* the margin below conntols the positon */
-    margin: 1rem 0 1rem 3rem;
+    margin: .5rem 0 1rem 3rem;
     width: 200%;
     max-width: 250px;
 
@@ -283,7 +265,7 @@ Search up conditionals in svelte
 
 .remember {
     text-align: center;
-    margin: 0 0 2rem;
+    margin: 0 0 2rem 0;
 }
 
 .remember input {
@@ -302,6 +284,7 @@ Search up conditionals in svelte
     justify-content: center;
 
 
+
 }
 
 .account .signbutton {
@@ -315,13 +298,16 @@ Search up conditionals in svelte
 .signin {
     background: transparent;
     font-size: 1.5rem;
+    border: 0;
 }
 
 
 .login {
     background: none;
     font-size: 1.5rem;
+    border: 0;
 }
+
 .signbutton button:hover {
     background-color: #6fc5ff;
     box-shadow: 0 0 20px #6fc5ff50;
@@ -334,20 +320,25 @@ Search up conditionals in svelte
     box-shadow: none;
 }
 
+/* /\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ */
+/* start of the sign-up page */
+/* \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ */
 
-/* start the sign up page */
+.card2 {
+    height: 81vh;
+    display: flex;
+}
 
-
-.innerbox2{
-    width: 400px;
-    height: 555px;
+.back {
+    width: 300px;
+    height: 450px;
     margin: auto;
     border-radius: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    background: #ffffff;
+}
+
+.signup {
+    text-align: center;
 }
 
 /* start of the name input */
@@ -634,14 +625,13 @@ Search up conditionals in svelte
 
 .signupbuttondiv {
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
 .signupbutton button {
     width: 5.5rem;
     height: 2rem;
-    background-color: aliceblue;
+    background-color: rgb(154, 192, 225);
     border-radius: 3rem;
     border: none;
 }
@@ -657,10 +647,5 @@ Search up conditionals in svelte
     -webkit-transition: all 0.25s;
     box-shadow: none;
 }
-.container2{
-    height:500px;
-}
 </style>
 
-=======
->>>>>>> ded7d53 (Header)
