@@ -79,7 +79,7 @@ section {
     display: flex;
     flex-wrap: wrap;
 }
-</style>>
+</style>
 <!-- This section will need some logic to check if the user is logged in or not - this will have to be implemented in conjeunction with user authentication -->
 <div class = "main">
     <div id = "mainHeader">
