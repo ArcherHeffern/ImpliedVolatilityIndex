@@ -1,67 +1,92 @@
 <div id="footer-main">
     <div id="footer-top">
         <div id="footer-left">
-            <h1 class="footer-h1">© Brandeis Quant Club. All Rights Reserved</h1>
+            <p1 class="footer-h1">© Brandeis Quant Club. All Rights Reserved</p1>
+        </div>
+        <div id="footer-middle">
         </div>
         <div id="footer-right">
-            <div class="grow1 marginLeft">
-                <a href="/team" class = "footer-h1">About us</a>
-            </div>
-            <div class="grow1">
-                <a href="https://brandeisquantclub.org/" class="footer-h1">Quant Club Website</a>
-            </div>
-            <div class="grow1">
-                <a href="https://www.linkedin.com/company/brandeisquants/"><img src="Linkedin.png" height="50px" width="50px" alt="quant logo"></a>
-                
-            </div>
+            <a href="/team">About us</a>
+            <a href="https://brandeisquantclub.org/">Quant Club Website</a>
+            <a href="https://www.linkedin.com/company/brandeisquants/"><img id = "linkedin-logo" src="Linkedin.png" alt="quant logo"></a>    
         </div>
     </div>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@600&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </div>
 
 <style>
-    .footer-h1 {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 20px;
-        font-weight: 50;
-        margin-bottom: 1px;
-    }
-    
-    .grow1 { flex-grow: 0.2; }
-    .marginLeft { margin-left: auto; }
+   
     #footer-main {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        font-family: 'Chivo', monospace;
+    background-color: rgb(237, 237, 237);
+    /* margin: 0.2rem; */
     }
-
     #footer-top {
         display: flex;
-        border-style: none;
-        flex-direction: row;
-        margin-top: 8px;
+        height: 70px;
         width: 100%;
+        background-color: white;
+        border-radius: 7px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border: 0px black solid;
     }
-
     #footer-left {
         display: flex;
         border-style: none;
-        justify-content: left;
+        justify-content:space-around;
         text-align: left;
         margin-left: 15px;
-        width: 50%;
+        width: 25%;
     }
 
+    #footer-middle {
+        /* display: flex;
+        border-style: none;
+        justify-content:space-around;
+        text-align: left;
+        margin-left: 15px; */
+        width: 45%;
+    }
     #footer-right {
         display: flex;
-        border-style: none;
-        flex-direction: row;
-        justify-content: right;
-        text-align: right;
-        margin-right: 15px;
-        width: 50%;
+        justify-content:space-around;
+        gap: 20px;
+        height: 70px;
+        margin: 0 10px 0 0;
+        width: 30%;
     }
-
-   
+    #linkedin-logo {
+    /* border: 2px solid black; */
+    height: 50px;
+    width: 50px;
+    margin: -13px 0 10px 0;
+    }   
+    .footer-h1 {
+        font-size: 20px;
+        font-weight: 30;
+        margin: 25px 0px 0 0;
+        height: 20px;
+        /* margin-bottom: 1px; */
+    }
+    a {
+    margin: 27px 0px 0 0;
+    height: 20px;
+    text-decoration: none;
+    }
+    a:link {
+        color: black;
+    }
+    a:hover {  
+        color: rgb(255, 85, 85);
+    }
+    a:active {
+        text-decoration: none; 
+    }
+    a:visited {
+        color: black;
+        text-decoration: none; 
+    }
+    a:visited:hover {  
+        color: rgb(255, 85, 85);
+    }
 </style>
-
-
