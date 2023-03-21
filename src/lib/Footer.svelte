@@ -11,24 +11,24 @@
             <a href="https://www.linkedin.com/company/brandeisquants/"><img id = "linkedin-logo" src="Linkedin.png" alt="quant logo"></a>    
         </div>
     </div>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@600&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap" rel="stylesheet">
 </div>
 
 <style>
    
     #footer-main {
-        font-family: 'Chivo', monospace;
-    background-color: rgb(237, 237, 237);
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
     /* margin: 0.2rem; */
     }
     #footer-top {
         display: flex;
         height: 70px;
         width: 100%;
-        background-color: white;
+        /* background-color: white;
         border-radius: 7px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        border: 0px black solid;
+        border: 0px black solid; */
     }
     #footer-left {
         display: flex;
@@ -36,7 +36,7 @@
         justify-content:space-around;
         text-align: left;
         margin-left: 15px;
-        width: 25%;
+        width: 30%;
     }
 
     #footer-middle {
@@ -45,7 +45,7 @@
         justify-content:space-around;
         text-align: left;
         margin-left: 15px; */
-        width: 45%;
+        width: 40%;
     }
     #footer-right {
         display: flex;
@@ -63,7 +63,7 @@
     }   
     .footer-h1 {
         font-size: 20px;
-        font-weight: 30;
+        
         margin: 25px 0px 0 0;
         height: 20px;
         /* margin-bottom: 1px; */
@@ -72,6 +72,8 @@
     margin: 27px 0px 0 0;
     height: 20px;
     text-decoration: none;
+    font-size:20px;
+    
     }
     a:link {
         color: black;
