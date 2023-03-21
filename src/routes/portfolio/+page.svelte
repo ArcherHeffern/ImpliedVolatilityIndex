@@ -50,11 +50,16 @@
     function analysisPopUp(){
       window.open("analysisplaceholder","bfs","fullscreen,scrollbars")
     }
+
+    function deleteRow(r) {
+        var i = r.parentNode.parentNode.rowIndex;
+        document.getElementById("t").deleteRow(i); 
+    }
 </script>
 
 <div class="portfolio">
     <div class="stockTable">
-        <table>
+        <table id="t">
             <thead>
                 <tr>
                     <td>Stock</td>
@@ -70,21 +75,21 @@
                     <td>Price</td>
                     <td>Data1</td>
                     <td>Data2</td>
-                    <td><button onClick = "deleteStock()" >trash</button></td>
+                    <td><input type="button" value="trash" onclick="deleteRow(this)" ></td>
                 </tr>
                 <tr>
                     <td>Stock2</td>
                     <td>Price</td>
                     <td>Data1</td>
                     <td>Data2</td>
-                    <td><button onClick = "deleteStock()" >trash</button></td>
+                    <td><input type="button" value="trash" onclick="deleteRow(this)" ></td>
                 </tr>
                 <tr>
                     <td>Stock3</td>
                     <td>Price</td>
                     <td>Data1</td>
                     <td>Data2</td>
-                    <td><button onClick = "deleteStock()" >trash</button></td>
+                    <td><input type="button" value="trash" onclick="deleteRow(this)"></td>
                 </tr>
             </tbody>
         </table>
