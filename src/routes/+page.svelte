@@ -29,7 +29,7 @@ this is the working main page
     }
 
     .button{
-        width: 30px;
+        width: 20px;
         height: 250px;
     }
 
