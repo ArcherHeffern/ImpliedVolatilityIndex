@@ -5,7 +5,6 @@
         display:flex;
         align-items:center;
         flex-direction: column;
-
     }
     .stockTable {
         margin:auto;
@@ -45,6 +44,22 @@
         line-height: 38px;
         color: #000000;
     }
+    .trash {
+        background-image: url(trash.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .trash,.modify {
+        background-color: white;
+        border:none;
+        padding:10px;
+    }
+
+    .modify {
+        background-image: url(pen.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
     
 </style>
 
@@ -54,9 +69,13 @@
     }
 
     function deleteRow(){
-        var td = event.target.parentNode; 
+        var td = event.target.parentNode.parentNode; 
         var tr = td.parentNode; // the row to be removed
         tr.parentNode.removeChild(tr);
+    }
+
+    function modifyRow(){
+
     }
 </script>
 
@@ -78,21 +97,30 @@
                     <td>Price</td>
                     <td>Data1</td>
                     <td>Data2</td>
-                    <td><input type="button" value="trash" on:click={deleteRow} ></td>
+                    <td>
+                        <button class="trash" on:click={deleteRow}><img id = "trashBin" src="trash.png" alt="icon"></button> 
+                        <button class="modify" on:click={modifyRow} ><img id = "pen" src="pen.png" alt="icon"></button>
+                        </td>
                 </tr>
                 <tr>
                     <td>Stock2</td>
                     <td>Price</td>
                     <td>Data1</td>
                     <td>Data2</td>
-                    <td><input type="button" value="trash" on:click={deleteRow} ></td>
+                    <td>
+                        <button class="trash" on:click={deleteRow}><img id = "trashBin" src="trash.png" alt="icon"></button>
+                        <button class="modify" on:click={modifyRow} ><img id = "pen" src="pen.png" alt="icon"></button>
+                    </td>
                 </tr>
                 <tr>
                     <td>Stock3</td>
                     <td>Price</td>
                     <td>Data1</td>
                     <td>Data2</td>
-                    <td><input type="button" value="trash" on:click={deleteRow}></td>
+                    <td>
+                        <button class="trash" on:click={deleteRow}><img id = "trashBin" src="trash.png" alt="icon"></button>
+                        <button class="modify" on:click={modifyRow} ><img id = "pen" src="pen.png" alt="icon"></button>
+                    </td>
                 </tr>
             </tbody>
         </table>
