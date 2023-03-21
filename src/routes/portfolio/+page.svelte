@@ -1,38 +1,49 @@
 <style>
-    table, th, td {
-        border-bottom: 0.5px solid #000000;
+    .portfolio {
+        font-family: 'Outfit', sans-serif;
+        background-color: white;
+        display:flex;
+        flex-direction: column;
     }
-    .rows {
-        color: #000000;
+    .stockTable {
+        margin:auto;
+    }
+    table {
 
+        border-collapse:collapse;
+        font-size: 20px;
+        line-height: 14px;
+        letter-spacing: -0.005em;
     }
-    .cells {
+    table td{
+        padding: 16px 100px 16px;
+    }
+
+    table thead td {
+        font-weight:bolder;
+        border-bottom: 1px solid #000000;
+    }
+
+    table tbody td {
+        border-bottom: 1px solid #000000;
+        font-weight:bold;
         color: #6A6A65;
     }
-    .rows, .cells {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 70%;
-        letter-spacing: -0.005em;
-        border-bottom: 0.5px solid #000000;
-    }
-
-    .viewAnalysis {
-        position: absolute;
-        left: 41%;
-        right: 41%;
-        top: 80%;
-        bottom: 15%;
-
+    .viewAnalysis{
+        font-family: 'Outfit', sans-serif;
+        margin:50px auto;
+        padding: 3px 40px 3px;
+        background-color: white;
         border: 1px solid #000000;
         border-radius: 20px;
         text-align: center;
 
         font-weight: 200;
-        font-size: 30px;
+        font-size: 25px;
         line-height: 38px;
         color: #000000;
     }
+    
 </style>
 
 <script>
@@ -41,48 +52,43 @@
     }
 </script>
 
-<div class="stockTable">
+<div class="portfolio">
+    <div class="stockTable">
         <table>
-            <div class = "rows">
+            <thead>
                 <tr>
-                    <th>Stocks</th>
-                    <th>Price</th> 
-                    <th>Data1</th>
-                    <th>Data2</th>
-                    <th> </th>
+                    <td>Stock</td>
+                    <td>Price</td>
+                    <td>Data1</td>
+                    <td>Data2</td>
+                    <td></td>
                 </tr>
-            </div>
-            <div class = "cells">
+            </thead>
+            <tbody>
                 <tr>
-                    <td>stock1</td>
-                    <td>price</td> 
-                    <td>data1</td>
-                    <td>data2</td>
-                    <td>icon-placeholder</td>
-                </tr>
-                <tr>
-                    <td>stock2</td>
-                    <td>price</td> 
-                    <td>data1</td>
-                    <td>data2</td>
-                    <td>icon-placeholder</td>
+                    <td>Stock1</td>
+                    <td>Price</td>
+                    <td>Data1</td>
+                    <td>Data2</td>
+                    <td><button onClick = "deleteStock()" >trash</button></td>
                 </tr>
                 <tr>
-                    <td>stock1</td>
-                    <td>price</td> 
-                    <td>data1</td>
-                    <td>data2</td>
-                    <td>icon-placeholder</td>
+                    <td>Stock2</td>
+                    <td>Price</td>
+                    <td>Data1</td>
+                    <td>Data2</td>
+                    <td><button onClick = "deleteStock()" >trash</button></td>
                 </tr>
                 <tr>
-                    <td>stock1</td>
-                    <td>price</td> 
-                    <td>data1</td>
-                    <td>data2</td>
-                    <td>icon-placeholder</td>
+                    <td>Stock3</td>
+                    <td>Price</td>
+                    <td>Data1</td>
+                    <td>Data2</td>
+                    <td><button onClick = "deleteStock()" >trash</button></td>
                 </tr>
-            </div>
-    </table>
+            </tbody>
+        </table>
+    </div>
+    <button class="viewAnalysis" onClick = "analysisPopUp()" >View Analysis</button>
 </div>
-<button class="viewAnalysis" onClick = "analysisPopUp()" >View Analysis</button>
 
