@@ -3,7 +3,9 @@
         font-family: 'Outfit', sans-serif;
         background-color: white;
         display:flex;
+        align-items:center;
         flex-direction: column;
+
     }
     .stockTable {
         margin:auto;
@@ -51,9 +53,10 @@
       window.open("analysisplaceholder","bfs","fullscreen,scrollbars")
     }
 
-    function deleteRow(r) {
-        var i = r.parentNode.parentNode.rowIndex;
-        document.getElementById("t").deleteRow(i); 
+    function deleteRow(){
+        var td = event.target.parentNode; 
+        var tr = td.parentNode; // the row to be removed
+        tr.parentNode.removeChild(tr);
     }
 </script>
 
@@ -75,21 +78,21 @@
                     <td>Price</td>
                     <td>Data1</td>
                     <td>Data2</td>
-                    <td><input type="button" value="trash" onclick="deleteRow(this)" ></td>
+                    <td><input type="button" value="trash" on:click={deleteRow} ></td>
                 </tr>
                 <tr>
                     <td>Stock2</td>
                     <td>Price</td>
                     <td>Data1</td>
                     <td>Data2</td>
-                    <td><input type="button" value="trash" onclick="deleteRow(this)" ></td>
+                    <td><input type="button" value="trash" on:click={deleteRow} ></td>
                 </tr>
                 <tr>
                     <td>Stock3</td>
                     <td>Price</td>
                     <td>Data1</td>
                     <td>Data2</td>
-                    <td><input type="button" value="trash" onclick="deleteRow(this)"></td>
+                    <td><input type="button" value="trash" on:click={deleteRow}></td>
                 </tr>
             </tbody>
         </table>
