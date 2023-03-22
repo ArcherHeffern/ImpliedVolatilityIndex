@@ -52,7 +52,6 @@ Search up conditionals in svelte
 
 /* this is the code for the card */
 .card {
-    height: 83vh;
     display: flex;
 }
 
