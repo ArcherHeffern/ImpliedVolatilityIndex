@@ -4,12 +4,14 @@
 Search up conditionals in svelte
 -->
 
-<script>
+<script lang="ts">
     let signin = false;
 
     function toggleflip() {
         signin = !signin
     }
+
+    import { DB } from '../db';
 
 </script>
 
@@ -23,11 +25,11 @@ Search up conditionals in svelte
                         <h1>Log In</h1>
                     </div>
                     <div class="user">
-                        <input required="" placeholder="Name" class="userfield" type="input">
+                        <input required placeholder="Name" class="userfield" type="input">
                         <label class="form__label" for="name">User Name</label>
                     </div>
                     <div class="password">
-                        <input required="" placeholder="Password" class="password__field" type="password">
+                        <input required placeholder="Password" class="password__field" type="password">
                         <label class="password__label" for="name">Password</label>
                     </div>
                     <div class="remember">
@@ -57,22 +59,22 @@ Search up conditionals in svelte
                 <h1>Sign up</h1>
             </div>
             <div class="name">
-                <input required="" placeholder="Name" class="name_field" type="input">
+                <input required placeholder="Name" class="name_field" type="input">
                 <label class="form2__label" for="name">Name</label>
             </div>
 
             <div class="new_email">
-                <input required="" placeholder="Username" class="email_field" type="input">
+                <input required placeholder="Username" class="email_field" type="input">
                 <label class="email2_label" for="Email">Email</label>
             </div>
 
             <div class="enterpassword">
-                <input required="" placeholder="Password" class="new_password__field" type="password">
+                <input required placeholder="Password" class="new_password__field" type="password">
                 <label class="New_password__label" for="name">Password</label>
             </div>
 
             <div class="confirmpassword">
-                <input required="" placeholder="confirm_Password" class="confirm_password__field" type="password">
+                <input required placeholder="confirm_Password" class="confirm_password__field" type="password">
                 <label class="confirm_password__label" for="name">Confirm Password</label>
             </div>
             <div class="signupbuttondiv">
