@@ -15,8 +15,6 @@
             </div>
         </div>
     </div>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap" rel="stylesheet">
-    <!-- What is this for? -->
 </div>
 
 
@@ -27,6 +25,7 @@
     justify-content: center;
     align-items: center;
     font-family: 'Outfit', sans-serif;
+    font-weight: 100;
     background-color: white;
     height: 110px;
 }

@@ -8,12 +8,11 @@
         <a href="https://www.linkedin.com/company/brandeisquants/"><img id = "linkedin-logo" src="Linkedin.png" alt="quant logo"></a>    
     </div>
 </div>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap" rel="stylesheet">
-
 <style>
     #footer-top {
         background-color: white;
         font-family: 'Outfit', sans-serif;
+        font-weight: 100;
         display: flex;
         justify-content: space-between;
         align-items: center;
