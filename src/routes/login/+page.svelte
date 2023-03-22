@@ -1,7 +1,4 @@
-<svelte:head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
-        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
-</svelte:head>
+
 
 <!-- put login page in if statements, and forgot password page in the else statement
 Search up conditionals in svelte
@@ -34,9 +31,8 @@ Search up conditionals in svelte
                         <label class="password__label" for="name">Password</label>
                     </div>
                     <div class="remember">
-                        <p><span class="input"><input type="checkbox" name="checkbox" id="checkboc"></span>Remember
-                            me
-                        </p>
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <p>Remember me</p>
 
                     </div>
 
@@ -267,6 +263,10 @@ Search up conditionals in svelte
 .remember {
     text-align: center;
     margin: 0 0 2rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
 }
 
 .remember input {
@@ -274,18 +274,10 @@ Search up conditionals in svelte
     height: 1.2rem;
 }
 
-.remember span {
-    color: yellow;
-}
-
-
 .account {
     display: flex;
     align-items: center;
     justify-content: center;
-
-
-
 }
 
 .account .signbutton {
@@ -293,6 +285,7 @@ Search up conditionals in svelte
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    /* transition: all .1s; */
 }
 
 
@@ -310,8 +303,10 @@ Search up conditionals in svelte
 }
 
 .signbutton button:hover {
-    background-color: #6fc5ff;
-    box-shadow: 0 0 20px #6fc5ff50;
+    color: #6fc5ff;
+    /* color: rgb(255, 85, 85); */
+    transition: all .1s;
+    /* box-shadow: 0 0 20px #6fc5ff50; */
 }
 
 .signbutton button:active {
@@ -345,6 +340,7 @@ Search up conditionals in svelte
 /* start of the name input */
 .name {
     position: relative;
+    display: flex;
     padding: 20px 0 0;
     /* margin: 20px 0 2rem 20px; */
     /* margin-top: 10px; */
@@ -633,6 +629,8 @@ Search up conditionals in svelte
     width: 5.5rem;
     height: 2rem;
     background-color: rgb(154, 192, 225);
+    cursor: pointer;
+    transition: all .1s;
     border-radius: 3rem;
     border: none;
 }

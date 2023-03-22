@@ -1,28 +1,10 @@
-this is the working main page
-
 <style>
-    * {
-        margin: 0px;
-        padding: 0px;
-    }
-
     .body {
-        height: 200vh;
-        background: rgb(255, 255, 255);
+        background: white;
     }
-
-
-
-    .topnav {
-        overflow: hidden;
-        background-color: #e9e9e9;
-    }
-
-
     .container-graph {
         display: flex;
         justify-content: space-around;
-        flex-directon: row;
         align-items: center;
         flex-wrap: wrap;
 
@@ -44,17 +26,6 @@ this is the working main page
         flex-direction: row;
         overflow-x: scroll;
     }
-
-
-    #text-content {
-        padding-left: 10px;
-    }
-
-    /* a {
-        color: gray;
-        text-decoration: none;
-    } */
-
 </style>
 
 <script>
