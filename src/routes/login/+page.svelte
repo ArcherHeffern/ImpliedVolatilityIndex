@@ -346,8 +346,8 @@ Search up conditionals in svelte
 .name {
     position: relative;
     padding: 20px 0 0;
-    margin: 20px 0 2rem 20px;
-    margin-top: 10px;
+    /* margin: 20px 0 2rem 20px; */
+    /* margin-top: 10px; */
     width: 180%;
     max-width: 180px;
 }
