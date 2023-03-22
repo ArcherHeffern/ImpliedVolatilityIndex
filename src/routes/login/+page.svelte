@@ -4,11 +4,6 @@
 Search up conditionals in svelte
 -->
 
-<script lang="ts">
-
-    import { DB } from '../db';
-
-</script>
 
         <form action="">
             <div class="card">
