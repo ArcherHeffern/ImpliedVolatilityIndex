@@ -97,5 +97,11 @@ a:hover {
     transition: all .1s;
 }
 
+@media (max-width: 1020px) {
+        #container_navbar {
+            display: none;
+        }
+    }
+
 </style>
 <!-- This section will need some logic to check if the user is logged in or not - this will have to be implemented in conjeunction with user authentication -->
