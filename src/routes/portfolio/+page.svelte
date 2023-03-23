@@ -6,9 +6,7 @@
         align-items:center;
         flex-direction: column;
     }
-    .stockTable {
-        margin:auto;
-    }
+
     table {
 
         border-collapse:collapse;
@@ -44,23 +42,14 @@
         line-height: 38px;
         color: #000000;
     }
-    .trash {
-        background-image: url(trash.png);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+
     .trash,.modify {
         background-color: white;
         border:none;
         padding:10px;
     }
 
-    .modify {
-        background-image: url(pen.png);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    
+
 </style>
 
 <script>
