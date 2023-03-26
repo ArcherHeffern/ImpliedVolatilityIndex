@@ -2,9 +2,8 @@ import { json, text } from '@sveltejs/kit';
 import { auth } from '../../../../db.js';
 import { signInWithEmailAndPassword } from 'firebase/auth'
  
-/** @type {import('./$types').RequestHandler} */
 export const POST = async ({ request }) => {
-  let email, password;
+  let email: string, password: string;
   try {
     ({ email, password } = await request.json());
     if (!email || !password) throw new Error("");
