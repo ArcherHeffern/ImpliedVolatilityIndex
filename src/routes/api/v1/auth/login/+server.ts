@@ -1,8 +1,9 @@
 import { json, text } from '@sveltejs/kit';
-import { auth } from '../../../../db.js';
-import { signInWithEmailAndPassword } from 'firebase/auth'
+import admin from '../../../../fireconfig';
  
 export const POST = async ({ request }) => {
+  const auth = admin.auth()
+  // validate input
   let email: string, password: string;
   try {
     ({ email, password } = await request.json());
@@ -10,8 +11,9 @@ export const POST = async ({ request }) => {
   } catch {
     return text("Invalid Request", { status: 400});
   }
+  // get token or die trying
   try {
-    return json(await signInWithEmailAndPassword(auth, email, password), { status: 201 })
+    return json(await auth.verifyIdToken(), { status: 201 })
   } catch {
     return new Response(JSON.stringify("User Not Found"), { status: 404 })
   }
