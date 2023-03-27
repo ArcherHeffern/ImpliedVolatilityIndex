@@ -5,11 +5,11 @@
   }
   
   .name{
-    font-size: 30px;
+    /* font-size: 25px; */
   }
 
   .directorClass{
-    font-size: 25px;
+    /* font-size: 25px; */
   }
 
   .titlePositions{
@@ -22,11 +22,11 @@
       padding: 0 90px;
       margin-top: 50px;
       margin-bottom: 40px;
-      font-size: 30px;
+      font-size: 25px;
   }
 
   .p1{
-      font-size: 30px;
+      font-size: 25px;
       margin-bottom: 5px;
       margin-top: 30px;
   }
@@ -44,7 +44,6 @@ float: left;
 width: 35%;
 margin-bottom: 16px;
 margin-left: 116px;
-/* padding: 0 90px; */
 }
 
 .container {
@@ -71,15 +70,16 @@ color: #333;
 background-color: #333;
 }
 
+#pfp{
+  float: right;
+  margin: 0 0 0 15px;
+}
+
 </style>
 
 
 
 <main>
-<div class="aboutTitle">
-  <h1>About the Team</h1>
-</div>
-
 <div class="titlePositions">
   <h2>Members</h2>
 </div>
@@ -96,7 +96,7 @@ background-color: #333;
 <div class="row">
   <div class="column">
     <div class="container">
-      <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="quant logo" > </h2>
+      <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="profile" id="pfp"> </h2>
       <h3 class="directorClass">Director of Morale</h3>
       <p class="p1">Hello! I am Daniel and this is just some random text to test out what I am trying to create 
         bodybod ybodybodyb odybodybodybod ybodybodybod ybodybodybody
@@ -107,7 +107,7 @@ background-color: #333;
 
   <div class="column">
     <div class="container">
-      <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="quant logo" > </h2>
+      <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="profile" id="pfp"> </h2>
       <h3 class="directorClass">Director of Morale</h3>
       <p class="p1">Hello! I am Daniel and this is just some random text to test out what I am trying to create 
         bodybod ybodybodyb odybodybodybod ybodybodybod ybodybodybody
@@ -125,8 +125,8 @@ background-color: #333;
 <div class="row">
   <div class="column">
     <div class="container">
-      <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="quant logo" > </h2>
-      <h3 class="directorClass">Director of Morale</h3>
+      <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="profile" id="pfp" > </h2>
+      <h4 class="directorClass">Director of Morale</h4>
       <p class="p1">Hello! I am Daniel and this is just some random text to test out what I am trying to create 
         bodybod ybodybodyb odybodybodybod ybodybodybod ybodybodybody
         body 
@@ -136,7 +136,7 @@ background-color: #333;
 
   <div class="column">
     <div class="container">
-      <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="quant logo" > </h2>
+      <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="profile" id="pfp"> </h2>
       <h3 class="directorClass">Director of Morale</h3>
       <p class="p1">Hello! I am Daniel and this is just some random text to test out what I am trying to create 
         bodybod ybodybodyb odybodybodybod ybodybodybod ybodybodybody
@@ -154,7 +154,7 @@ background-color: #333;
 <div class="row">
   <div class="column">
     <div class="container">
-      <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="quant logo" > </h2>
+      <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="profile" id="pfp"> </h2>
       <h3 class="directorClass">Director of Morale</h3>
       <p class="p1">Hello! I am Daniel and this is just some random text to test out what I am trying to create I will put
         some more text here to test out the length of this section lol xd testing testing testing
@@ -166,7 +166,7 @@ background-color: #333;
 
   <div class="column">
     <div class="container">
-      <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="quant logo" > </h2>
+      <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="profile" id="pfp"> </h2>
       <h3 class="directorClass">Director of Morale</h3>
       <p class="p1">Hello! I am Daniel and this is just some random text to test out what I am trying to create 
         bodybod ybodybodyb odybodybodybod ybodybodybod ybodybodybody
