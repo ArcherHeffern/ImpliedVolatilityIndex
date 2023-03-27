@@ -39,11 +39,16 @@
 box-sizing: inherit;
 }
 
+.row{
+  margin-left: 118px;
+}
+
 .column {
 float: left;
-width: 35%;
+width: 42%;
 margin-bottom: 16px;
-margin-left: 116px;
+margin-right: 16px;
+/* margin-left: 116px; */
 }
 
 .container {
