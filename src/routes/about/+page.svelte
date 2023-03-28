@@ -5,30 +5,32 @@
   }
   
   .name{
-    /* font-size: 25px; */
+    font-size: 25px;
+    font-weight: 400;
   }
 
   .directorClass{
-    /* font-size: 25px; */
+    font-size: 25px;
+    font-weight: 200;
   }
 
   .titlePositions{
       display: flex;
       flex-direction: column;
-      justify-content: left;
-      text-align: left;
       margin-left: 45px;
       width: 76%;
       padding: 0 90px;
       margin-top: 50px;
       margin-bottom: 40px;
-      font-size: 25px;
+      font-size: 20px;
+      font-weight: 100;
   }
 
   .p1{
       font-size: 25px;
       margin-bottom: 5px;
       margin-top: 30px;
+      font-weight: 100;
   }
 
   .photoOfMembers{
@@ -94,7 +96,7 @@ background-color: #333;
 </div>
 
 <div class="titlePositions">
-  <h2>Directors</h2>
+  <h2>Director</h2>
   <hr>
 </div>
 
@@ -131,7 +133,7 @@ background-color: #333;
   <div class="column">
     <div class="container">
       <h2 class="name">Daniel Archerson <img src="logo.png" height="50px" width="auto" alt="profile" id="pfp" > </h2>
-      <h4 class="directorClass">Director of Morale</h4>
+      <h3 class="directorClass">Director of Morale</h3>
       <p class="p1">Hello! I am Daniel and this is just some random text to test out what I am trying to create 
         bodybod ybodybodyb odybodybodybod ybodybodybod ybodybodybody
         body 
