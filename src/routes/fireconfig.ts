@@ -1,4 +1,6 @@
-import admin from "firebase-admin";
+import admin, { initializeApp } from "firebase-admin";
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import firebase from 'firebase/app'
 import serviceAccount from "../../secrets.json"
 
 const firebaseConfig = {
@@ -13,7 +15,6 @@ const firebaseConfig = {
 };
 
 // export const firebaseApp = initializeApp(firebaseConfig);
-
 try {
     admin.initializeApp({
       credential: {...admin.credential.cert(`${serviceAccount}`), ...firebaseConfig},
@@ -22,5 +23,11 @@ try {
 } catch {
     console.log("error")
 }
+// initialize firbase client
 
-export default admin;
+let firebaseApp = firebase.initializeApp(firebaseConfig)
+const auth = getAuth(firebaseApp)
+
+export { admin, auth, signInWithEmailAndPassword};
+
+
