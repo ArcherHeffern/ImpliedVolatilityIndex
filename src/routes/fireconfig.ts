@@ -43,7 +43,7 @@ const db = getFirestore(firebaseClientApp);
 
 const auth = getAuth(firebaseClientApp)
 
-export {auth, signInWithEmailAndPassword};
+export {db, auth, signInWithEmailAndPassword};
 export default admin;
 
 
