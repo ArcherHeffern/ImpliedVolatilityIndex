@@ -1,8 +1,11 @@
 import admin from "firebase-admin";
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import firebase, {deleteApp, getApps, getApp} from 'firebase/app'
-import { getFirestore } from "firebase/firestore";
 
+// import firebase from 'firebase/app'
+import { initializeApp } from "firebase/app";
+import {deleteApp, getApps, getApp} from 'firebase/app'
+import { getFirestore } from "firebase/firestore";
+import "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -27,21 +30,32 @@ try{ admin.initializeApp({
 
 // initialize firebase client
 
+
 let firebaseClientApp;
 
+
 if(!getApps().length){
-  firebaseClientApp = firebase.initializeApp(firebaseConfig, "client")
+  firebaseClientApp = initializeApp(firebaseConfig, "client")
 }else{
   firebaseClientApp = getApp("client")
-  deleteApp(firebaseClientApp)
-  firebaseClientApp = firebase.initializeApp(firebaseConfig, "client")
+  // deleteApp(firebaseClientApp)
+  // firebaseClientApp = initializeApp(firebaseConfig, "client")
 }
 
-// initialize firestore database
-const db = getFirestore(firebaseClientApp);
 
 
 const auth = getAuth(firebaseClientApp)
+
+// Initialize Firestore
+// The firestore object is used for client-side interactions with Firestore, 
+// while the firestoreAdmin object is used for server-side administrative interactions 
+// with Firestore (such as creating indexes or deleting collections).
+
+
+
+const db = getFirestore(firebaseClientApp);
+// const db = firebaseClientApp.firestore()
+
 
 export {db, auth, signInWithEmailAndPassword};
 export default admin;

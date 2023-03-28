@@ -1,5 +1,5 @@
 import { json, text } from '@sveltejs/kit';
-import admin, { auth, signInWithEmailAndPassword }from '../../../../fireconfig';
+import admin, { auth, signInWithEmailAndPassword } from '../../../../fireconfig';
 import jwt from 'jsonwebtoken';
 import type { JwtPayload } from 'jsonwebtoken';
 
