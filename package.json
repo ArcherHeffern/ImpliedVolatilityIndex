@@ -21,5 +21,8 @@
 		"typescript": "^5.0.2",
 		"vite": "^4.0.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@firebase/firestore": "^3.9.0"
+	}
 }

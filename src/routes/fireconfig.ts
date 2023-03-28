@@ -1,6 +1,7 @@
 import admin from "firebase-admin";
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import firebase, {deleteApp, getApps, getApp} from 'firebase/app'
+import { getFirestore } from "firebase/firestore";
 
 
 
@@ -35,6 +36,10 @@ if(!getApps().length){
   deleteApp(firebaseClientApp)
   firebaseClientApp = firebase.initializeApp(firebaseConfig, "client")
 }
+
+// initialize firestore database
+const db = getFirestore(firebaseClientApp);
+
 
 const auth = getAuth(firebaseClientApp)
 
