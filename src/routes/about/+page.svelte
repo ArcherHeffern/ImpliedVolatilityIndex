@@ -1,9 +1,4 @@
 <style>
-  h1{
-      text-align: center;
-      margin-top: 30px;
-  }
-  
   .name{
     font-size: 25px;
     font-weight: 400;
@@ -17,9 +12,9 @@
   .titlePositions{
       display: flex;
       flex-direction: column;
-      margin-left: 45px;
-      width: 76%;
-      padding: 0 90px;
+      text-align: left;
+      width: 83.5%;
+      padding: 0 115px;
       margin-top: 50px;
       margin-bottom: 40px;
       font-size: 20px;
@@ -42,15 +37,16 @@ box-sizing: inherit;
 }
 
 .row{
-  margin-left: 118px;
+  width: 85.5%;
+  margin-right: 5%;
+  margin: auto;
+  margin-left: 6.8%;
 }
 
 .column {
 float: left;
-width: 42%;
+width: 50%;
 margin-bottom: 16px;
-margin-right: 16px;
-/* margin-left: 116px; */
 }
 
 .container {
