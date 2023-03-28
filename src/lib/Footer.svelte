@@ -3,7 +3,7 @@
         <p1 class="footer-h1">© Brandeis Quant Club. All Rights Reserved</p1>
     </div>
     <div id="footer-right">
-        <a href="/team">About us</a>
+        <a href="/about">About us</a>
         <a href="https://brandeisquantclub.org/">Quant Club Website</a>
         <a href="https://www.linkedin.com/company/brandeisquants/"><img id = "linkedin-logo" src="Linkedin.png" alt="quant logo"></a>    
     </div>
