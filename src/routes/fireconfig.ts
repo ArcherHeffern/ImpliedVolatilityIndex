@@ -21,7 +21,6 @@ const firebaseConfig = {
 
 
 // initialize firebase admin
-
 try{ admin.initializeApp({
   credential: admin.credential.cert('secrets.json'),
   ...firebaseConfig
@@ -29,10 +28,7 @@ try{ admin.initializeApp({
 
 
 // initialize firebase client
-
-
 let firebaseClientApp;
-
 
 if(!getApps().length){
   firebaseClientApp = initializeApp(firebaseConfig, "client")
@@ -42,20 +38,10 @@ if(!getApps().length){
   // firebaseClientApp = initializeApp(firebaseConfig, "client")
 }
 
-
-
 const auth = getAuth(firebaseClientApp)
 
-// Initialize Firestore
-// The firestore object is used for client-side interactions with Firestore, 
-// while the firestoreAdmin object is used for server-side administrative interactions 
-// with Firestore (such as creating indexes or deleting collections).
-
-
-
+// Get Firestore db reference
 const db = getFirestore(firebaseClientApp);
-// const db = firebaseClientApp.firestore()
-
 
 export {db, auth, signInWithEmailAndPassword};
 export default admin;
