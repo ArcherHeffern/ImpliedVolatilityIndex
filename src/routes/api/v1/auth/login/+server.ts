@@ -1,23 +1,21 @@
 import { json, text } from '@sveltejs/kit';
-import { admin, auth, signInWithEmailAndPassword}from '../../../../fireconfig';
+import admin, { auth, signInWithEmailAndPassword }from '../../../../fireconfig';
 
 
-
+// API route = api/v1/auth/login
 
 async function authenticateUser(email: string, password: string) {    // Authenticate user with Firbase authentication
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const idToken = userCredential.user.getIdToken();
-      return idToken
-    })
-    .catch((error) => {
-      console.error('Error authenticating user:', error);
-      throw error
-  });
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const idToken = await userCredential.user.getIdToken();
+    return idToken;
+  } catch (error) {
+    console.error('Error authenticating user:', error);
+    throw error;
+  }
 }
 
 export const POST = async ({ request }) => {
-  const admin = require('firebase-admin');
   const auth = admin.auth()
   // validate input
   let email: string, password: string;
@@ -29,9 +27,10 @@ export const POST = async ({ request }) => {
   }
   // get token or die trying
   try {
-    const token = authenticateUser(email, password)   // Method that gets the token from firebase authentication
+    const token = await authenticateUser(email, password)   // Method that gets the token from firebase authentication
     return json(await auth.verifyIdToken(token), { status: 201 })   // Verify the token and try to access the database
   } catch {
     return new Response(JSON.stringify("User Not Found"), { status: 404 })
   }
+
 }

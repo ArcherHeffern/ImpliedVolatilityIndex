@@ -3,7 +3,7 @@ import admin from '../../../fireconfig';
 const auth = admin.auth()
 
 // Create new user
-
+// API route: api/v1/users/
 export const POST = async ({ request }) => {
     let email: string, password: string;
     try {

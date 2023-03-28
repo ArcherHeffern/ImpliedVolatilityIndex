@@ -1,7 +1,8 @@
-import admin, { initializeApp } from "firebase-admin";
+import admin from "firebase-admin";
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import firebase from 'firebase/app'
-import serviceAccount from "../../secrets.json"
+import firebase, {deleteApp, getApps, getApp} from 'firebase/app'
+
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyBLVpJJl1idgz7gjuSEBeoKMtMSKndnExo",
@@ -14,20 +15,30 @@ const firebaseConfig = {
   measurementId: "G-B1EWEHY3LQ"
 };
 
-// export const firebaseApp = initializeApp(firebaseConfig);
-try {
-    admin.initializeApp({
-      credential: {...admin.credential.cert(`${serviceAccount}`), ...firebaseConfig},
-      databaseURL: "https://quant-club-spring-2023-default-rtdb.firebaseio.com"
-    });
-} catch {
-    console.log("error")
+
+// initialize firebase admin
+
+try{ admin.initializeApp({
+  credential: admin.credential.cert('secrets.json'),
+  ...firebaseConfig
+});} catch(err){ admin.app() }
+
+
+// initialize firebase client
+
+let firebaseClientApp;
+
+if(!getApps().length){
+  firebaseClientApp = firebase.initializeApp(firebaseConfig, "client")
+}else{
+  firebaseClientApp = getApp("client")
+  deleteApp(firebaseClientApp)
+  firebaseClientApp = firebase.initializeApp(firebaseConfig, "client")
 }
-// initialize firbase client
 
-let firebaseApp = firebase.initializeApp(firebaseConfig)
-const auth = getAuth(firebaseApp)
+const auth = getAuth(firebaseClientApp)
 
-export { admin, auth, signInWithEmailAndPassword};
+export {auth, signInWithEmailAndPassword};
+export default admin;
 
 
