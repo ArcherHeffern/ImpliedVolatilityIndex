@@ -77,9 +77,14 @@
     function modifyRow(){
 
     }
-</script>
+
+    import SearchBar from "/src/lib/searchBar.svelte"
+
+    </script>
 
 <div class="portfolio">
+    <SearchBar />
+
     <div class="stockTable">
         <table id="t">
             <thead>
