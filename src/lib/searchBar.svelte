@@ -1,5 +1,6 @@
 <style>
 .search-bar {
+padding: 20px;
 display: flex;
 flex-direction: row;
 justify-content: center;
