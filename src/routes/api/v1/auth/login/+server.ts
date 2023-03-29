@@ -40,19 +40,27 @@ export const POST = async ({ request }) => {
   } catch {
     return text("Invalid Request", { status: 400});
   }
+
+  let token = ''
   // get token or die trying
   try {
-    const token = await authenticateUser(email, password)   // Method that gets the token from firebase authentication
-    const verifyResponse = await auth.verifyIdToken(token)
+    token = await authenticateUser(email, password)   // Method that gets the token from firebase authentication
+  } catch {
+    return json("User Not Found", { status: 404 })
+  }
+  try {
+    const decodedToken = await auth.verifyIdToken(token)
     const response = {"token": token,
                       "experiation date":  tokenExpirationTime(token), 
                       "user": {
-                        "user_id": verifyResponse.user_id,
-                        "email": verifyResponse.email,
+                        "user_id": decodedToken.user_id,
+                        "email": decodedToken.email,
                       }}
-    return json(response, { status: 201 })   // Verify the token and try to access the database
-  } catch {
-    return new Response(JSON.stringify("User Not Found"), { status: 404 })
+    return json(response, { status: 201 })
+  }catch{
+    return json("invalide token", {status: 401})
   }
+
+
 
 }
