@@ -4,6 +4,7 @@ import jwt from 'jsonwebtoken';
 import type { JwtPayload } from 'jsonwebtoken';
 
 
+
 // API route = api/v1/auth/login
 
 async function authenticateUser(email: string, password: string) {    // Authenticate user with Firbase authentication
@@ -49,6 +50,7 @@ export const POST = async ({ request }) => {
     return json("User Not Found", { status: 404 })
   }
   try {
+
     const decodedToken = await auth.verifyIdToken(token)
     const response = {"token": token,
                       "experiation date":  tokenExpirationTime(token), 

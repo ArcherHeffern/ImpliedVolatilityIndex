@@ -12,5 +12,6 @@
 	},
 	"paths": {
 		"@secrets.json/*": ["../../secrets.json"] // typescript requires path configuration to reference files
+		
 	  }
 }

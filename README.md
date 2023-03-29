@@ -8,7 +8,7 @@ npm i
 npm run dev
 ```
 ## Authenticating users
-### Example: Validating user with token before sending them information from our database
+### Template for validating user with token before sending them information from our database
 with a request that has the content
 ```
 {
@@ -16,6 +16,7 @@ with a request that has the content
 }
 ```
 we authenticate the user with the ```auth.verifyIdToken()``` function
+
 ```typescript
 export const GET = async ({ request }) => {
     const token = await request.json();     // convert request into JSON and the token
@@ -23,8 +24,8 @@ export const GET = async ({ request }) => {
         await auth.verifyIdToken(token) 
         const info = //information from our database 
         return json(info, {status : 200})   // return the info as a response
-    }catch{
-        return json("invalide token", {status: 401})
+    }catch{     // if verify failed then return invalid token
+        return json("invalid token", {status: 401})
     }
 }
 ```
