@@ -30,21 +30,17 @@
 }
 
 #mainHeader {
-    display: flex;
     margin: 0 0 10px 0;
     width: 100%;
     background-color: white;
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border-radius: 7px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border: 0px black solid; */
 }
 
 #right_header {
     display: flex;
     align-items: center;
+    float: right;
 }
 
 #containerlogo {
@@ -53,9 +49,9 @@
     justify-content: flex-start;
     height: 70px;
     margin: 0 10px 0 0;
+    float: left;
 }
 #quant-logo {
-    /* border: 2px solid black; */
     margin: 0 0 0 30px;
 }
 #container_navbar {
