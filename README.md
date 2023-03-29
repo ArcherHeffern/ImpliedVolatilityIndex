@@ -19,7 +19,7 @@ we authenticate the user with the ```auth.verifyIdToken()``` function
 
 ```typescript
 export const GET = async ({ request }) => {
-    const token = await request.json();     // convert request into JSON and the token
+    const token = await request.json();     // convert request into JSON format to retrieve the token
     try{
         await auth.verifyIdToken(token) 
         const info = //information from our database 
