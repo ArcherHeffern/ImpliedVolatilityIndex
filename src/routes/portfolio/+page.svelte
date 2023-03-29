@@ -6,9 +6,7 @@
         align-items:center;
         flex-direction: column;
     }
-    .stockTable {
-        margin:auto;
-    }
+
     table {
 
         border-collapse:collapse;
@@ -21,13 +19,13 @@
     }
 
     table thead td {
-        font-weight:bolder;
+        font-weight:500;
         border-bottom: 1px solid #000000;
     }
 
     table tbody td {
         border-bottom: 1px solid #000000;
-        font-weight:bold;
+        font-weight:500;
         color: #6A6A65;
     }
     .viewAnalysis{
@@ -44,23 +42,14 @@
         line-height: 38px;
         color: #000000;
     }
-    .trash {
-        background-image: url(trash.png);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+
     .trash,.modify {
         background-color: white;
         border:none;
         padding:10px;
     }
 
-    .modify {
-        background-image: url(pen.png);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    
+
 </style>
 
 <script>
@@ -123,8 +112,8 @@
                     <td>Data1</td>
                     <td>Data2</td>
                     <td>
-                        <button class="trash" on:click={deleteRow}><img id = "trashBin" src="trash.png" alt="icon"></button>
-                        <button class="modify" on:click={modifyRow} ><img id = "pen" src="pen.png" alt="icon"></button>
+                        <button class="trash" on:click={deleteRow}><i class="bi bi-trash3" id="trashBin" style="color:#6A6A65"></i></button>
+                        <button class="modify" on:click={modifyRow} ><i class="bi bi-pen" id="pen" style="color:#6A6A65"></i></button>
                     </td>
                 </tr>
             </tbody>
