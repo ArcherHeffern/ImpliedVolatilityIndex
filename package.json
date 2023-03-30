@@ -25,6 +25,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@firebase/firestore": "^3.9.0"
+		"@firebase/firestore": "^3.9.0",
+		"siema": "^1.5.1",
+		"swiper": "^9.1.1"
 	}
 }

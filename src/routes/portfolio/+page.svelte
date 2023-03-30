@@ -92,8 +92,8 @@
                     <td>Data1</td>
                     <td>Data2</td>
                     <td>
-                        <button class="trash" on:click={deleteRow}><img id = "trashBin" src="trash.png" alt="icon"></button> 
-                        <button class="modify" on:click={modifyRow} ><img id = "pen" src="pen.png" alt="icon"></button>
+                        <button class="trash" on:click={deleteRow}><i class="bi bi-trash3" id="trashBin" style="color:#6A6A65"></i></button> 
+                        <button class="modify" on:click={modifyRow} ><i class="bi bi-pen" id="pen" style="color:#6A6A65"></i></button>
                         </td>
                 </tr>
                 <tr>
@@ -102,8 +102,8 @@
                     <td>Data1</td>
                     <td>Data2</td>
                     <td>
-                        <button class="trash" on:click={deleteRow}><img id = "trashBin" src="trash.png" alt="icon"></button>
-                        <button class="modify" on:click={modifyRow} ><img id = "pen" src="pen.png" alt="icon"></button>
+                        <button class="trash" on:click={deleteRow}><i class="bi bi-trash3" id="trashBin" style="color:#6A6A65"></i></button>
+                        <button class="modify" on:click={modifyRow} ><i class="bi bi-pen" id="pen" style="color:#6A6A65"></i></button>
                     </td>
                 </tr>
                 <tr>
@@ -119,6 +119,6 @@
             </tbody>
         </table>
     </div>
-    <button class="viewAnalysis" onClick = "analysisPopUp()" >View Analysis</button>
+    <button class="viewAnalysis" on:Click = {analysisPopUp} >View Analysis</button>
 </div>
 
