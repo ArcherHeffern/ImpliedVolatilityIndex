@@ -23,3 +23,9 @@ export async function POST() {
         console.log(e)
     }
 }
+
+export async function GET({request}) {
+   const req = request.json()
+
+   return json(req, {status : 200})
+}
