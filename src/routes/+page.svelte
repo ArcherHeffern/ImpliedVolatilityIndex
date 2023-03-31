@@ -26,7 +26,7 @@
     }
     .slide {
         width: 200px;
-        float:right;
+        float:left;
         border-right: 1px solid lightgrey;
     }
 
@@ -38,9 +38,9 @@
         text-align:left;
     }
 
-    li {
-        float:right;
-    }
+   li {
+    float:right;
+   }
 
     h3 {
         display: block;
@@ -78,33 +78,45 @@
     import { slide } from 'svelte/transition'
 
     const financialHeader = [
+        {title: 'S&P 500', data: '3,963.60'},
+        {title: 'Dow 30', data: '32,372.59'},
+        {title: 'Nasdaq', data: '11,679.98'},
+        {title: 'Russell 2000', data: '1,746.73'},
         {title: 'Crude Oil', data: '73.11'},
         {title: 'Gold', data: '1,974.00'},
         {title: 'Silver', data: '23.48'},
-        {title: 'Russell 2000', data: '1,746.73'},
-        {title: 'Nasdaq', data: '11,679.98'},
-        {title: 'Dow 30', data: '32,372.59'},
-        {title: 'S&P 500', data: '3,963.60'},
     ]
     let startIndex = 0;
     const numOfSlide = 5; 
     let showingItems = financialHeader.slice(startIndex, startIndex + numOfSlide);
 
 
+    const prev = () => {
+        startIndex --;
+        if (startIndex < 0) {
+            startIndex = financialHeader.length - 1;
+         }
+        updateItems();
+    }
     const next = () => {
-        if (startIndex > 0) {
-            startIndex--;
+        startIndex ++;
+        if (startIndex >= financialHeader.length) {
+            startIndex = 0;
         }
-        showingItems = financialHeader.slice(startIndex, startIndex + numOfSlide);
+        updateItems();
+    };
+
+    const updateItems = () => {
+        const end = startIndex + numOfSlide;
+        if (end <= financialHeader.length) {
+            showingItems = financialHeader.slice(startIndex, end);
+        } else {
+            const firstPart = financialHeader.slice(startIndex);
+            const secondPart = financialHeader.slice(0, end - financialHeader.length);
+            showingItems = [...firstPart, ...secondPart];
+        }
         return showingItems;
     }
-    const prev = () => {
-        if (startIndex < financialHeader.length - numOfSlide) {
-            startIndex++;
-        } 
-        showingItems = financialHeader.slice(startIndex, startIndex + numOfSlide);
-        return showingItems;
-    };
 
 
 
@@ -116,20 +128,8 @@
     <div class="slider">
             
             <ul>
-                <li>
-                    <button class="btn btn-prev" on:click={prev}>
-                        <div id="left">
-                             <i class="bi bi-chevron-left" id="prevButton" style="font-size: 1.5rem;color:#453DE0;"></i>
-                        </div>  
-                    </button>
-                    <button class="btn btn-next" on:click={next}>
-                        <div id="right">
-                            <i class="bi bi-chevron-right" id="nextButton" style="font-size: 1.5rem;color:#453DE0;"></i>
-                        </div>
-                        </button>
-                </li>
                 {#each showingItems as item}
-                    <li transition:slide id={item.title} class="slide">
+                    <li transition:slide|local id={item.title} class="slide">
                         <h3>
                             <span class="title">{item.title}</span>
                             <br>
@@ -138,6 +138,18 @@
                         </h3>
                     </li>
             {/each}
+            <li>
+                <button class="btn btn-prev" on:click={prev}>
+                    <div id="left">
+                         <i class="bi bi-chevron-left" id="prevButton" style="font-size: 1.5rem;color:#453DE0;"></i>
+                    </div>  
+                </button>
+                <button class="btn btn-next" on:click={next}>
+                        <div id="right">
+                            <i class="bi bi-chevron-right" id="nextButton" style="font-size: 1.5rem;color:#453DE0;"></i>
+                        </div>
+                </button>
+            </li>
             </ul>
         </div>
     </div>
