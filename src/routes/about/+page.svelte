@@ -16,7 +16,7 @@
       width: 83.5%;
       padding: 0 115px;
       margin-top: 50px;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
       font-size: 20px;
       font-weight: 100;
   }
@@ -76,6 +76,33 @@ background-color: #333;
 #pfp{
   float: right;
   margin: 0 0 0 15px;
+}
+    /* Responsive layout - adjust grid columns to fit small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+  .titlePositions {
+    padding: 0 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+  /* Responsive layout - adjust font sizes for small screens */
+@media screen and (max-width: 450px) {
+  .name {
+    font-size: 20px;
+  }
+  .directorClass {
+    font-size: 20px;
+  }
+  .titlePositions {
+    font-size: 18px;
+  }
+  .p1 {
+    font-size: 20px;
+  }
 }
 
 </style>
