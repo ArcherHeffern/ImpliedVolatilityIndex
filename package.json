@@ -13,7 +13,7 @@
 		"@tsconfig/svelte": "^3.0.0",
 		"@types/firebase": "^3.2.1",
 		"dotenv": "^16.0.3",
-		"firebase": "^9.18.0",
+		"firebase": "^9.19.1",
 		"firebase-admin": "^11.5.0",
 		"svelte": "^3.55.1",
 		"svelte-carousel": "^1.0.24",
